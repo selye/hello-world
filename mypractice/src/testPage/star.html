@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_440482_gs7yk1uorir.css">
+    <title>Start</title>
+</head>
+<style>
+    input {
+        -webkit-appearance: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    
+     :root {
+        --main: #ffa822;
+        --basic: #999
+    }
+    
+    .radio_content input[name="rate"] {
+        font-family: "iconfont";
+        font-size: 30px;
+        transition: transform .2s ease;
+    }
+    
+    .radio_content input[name="rate"]::after {
+        content: "\e9ce";
+        color: var(--basic);
+        transition: color .4s ease;
+    }
+    
+    input[name="rate"]:checked,
+    input[name="rate"]:hover::after {
+        content: "\e729";
+        color: var(--main);
+    }
+    /* 兄弟元素一起高亮 */
+    
+    input[name="rate"]:hover~input[name="rate"]::after {
+        content: "\e729";
+        color: var(--main);
+    }
+    
+    input[name="rate"]:hover {
+        transform: scale(1.2);
+    }
+    
+    .radio_content {
+        width: 250px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: space-around;
+        /* 反向排列 */
+    }
+</style>
+
+<body>
+    <div class="radio_content">
+        <input type="radio" name="rate">
+        <input type="radio" name="rate">
+        <input type="radio" name="rate">
+        <input type="radio" name="rate">
+        <input type="radio" name="rate">
+    </div>
+    <style>
+        h3~p {
+            background: lightblue;
+        }
+    </style>
+    <div>
+
+        <h3>香蕉</h3>
+        <p>香蕉很甜</p>
+        <p>香蕉很甜</p>
+        <h3>苹果</h3>
+        <p>苹果很甜很甜</p>
+        <p>苹果很甜很甜</p>
+        <h3>柿子</h3>
+        <p>柿子很甜很甜很甜</p>
+        <p>柿子很甜很甜很甜</p>
+
+    </div>
+</body>
+
+</html>
